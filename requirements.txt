@@ -12,3 +12,6 @@ oomox-gui -- gtk with pywal
 arandr --multi monitor ctrl
 pnmixer --Audio control
 dunst --Notification daemon
+exa --ls for zsh
+mpv-youtube-dl --media player
+
