@@ -13,7 +13,7 @@ arandr --multi monitor ctrl
 pnmixer --Audio control
 dunst --Notification daemon
 i3lock-fancy (i3lock-multimonitor) --lock screen
-lxappearence set theme
+lxappearence --set theme
 exa --ls for zsh
 mpv-youtube-dl --media player
 
