@@ -1,0 +1,14 @@
+rofi -- launcher
+rofi-powermenu --powermenu
+fontawesome5 -- icons
+p10k(zsh) -- zshell plugin
+om-my-zsh -- zshell
+picom --compositor
+polybar -- toolbar
+nm-applet --network manager
+pywal -- color theme based on pywal
+feh --image viewer/ g setter
+oomox-gui -- gtk with pywal
+arandr --multi monitor ctrl
+pnmixer --Audio control
+dunst --Notification daemon
