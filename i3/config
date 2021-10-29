@@ -24,7 +24,7 @@ font pango:Benguiat 9.5
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # andsystem tray GUI for it.
@@ -36,6 +36,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym $mod+o exec --no-startup-id pactl set-sink-input-mute 2  toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -245,6 +246,7 @@ assign [class="firefox"] $ws1
 for_window [title=".*\(Private Browsing\).*"] move to workspace $ws5
 assign [class="mpv"] $ws6
 assign [class="Lutris"] $ws7
+assign [class="TelegramDesktop"] $ws8
 #assigning where workspace shows
 workspace $ws1 output HDMI-0
 workspace $ws2 output DP-0
@@ -252,6 +254,8 @@ workspace $ws3 output HDMI-0
 workspace $ws4 output DP-0
 workspace $ws5 output DP-0
 workspace $ws6 output HDMI-0
+workspace $ws7 output HDMI-0
+workspace $ws8 output DP-0
 
 #startup apps
 exec --no-startup-id nm-applet --indicator #wifi
@@ -261,16 +265,19 @@ exec --no-startup-id picom --config ~/picom.conf -b -f #compositor
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id dunst -conf ~/.config/dunst/dunstrc #notif daemon
 exec flameshot #screenshot
-
+exec_always --no-startup-id "setxkbmap -layout fr,us"
+exec_always --no-startup-id "setxkbmap -option 'grp:alt_shift_toggle'"
+exec --no-startup-id udiskie
 
 
 
 #Shortcuts
 bindsym $mod+b exec firefox
-bindsym $mod+t exec thunar
+bindsym $mod+t exec pcmanfm
 bindsym $mod+l exec i3lock-fancy-multimonitor -p
 bindsym $mod+s exec spotify-tray
 bindsym $mod+shift+s exec flameshot gui
+
 
 
 
