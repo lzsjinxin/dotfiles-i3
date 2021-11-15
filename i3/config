@@ -247,6 +247,7 @@ for_window [title=".*\(Private Browsing\).*"] move to workspace $ws5
 assign [class="mpv"] $ws6
 assign [class="Lutris"] $ws7
 assign [class="TelegramDesktop"] $ws8
+assign [class="eu4"] $ws9
 #assigning where workspace shows
 workspace $ws1 output HDMI-0
 workspace $ws2 output DP-0
@@ -254,8 +255,9 @@ workspace $ws3 output HDMI-0
 workspace $ws4 output DP-0
 workspace $ws5 output DP-0
 workspace $ws6 output HDMI-0
-workspace $ws7 output HDMI-0
+workspace $ws7 output DP-0
 workspace $ws8 output DP-0
+workspace $ws9 output HDMI-0
 
 #startup apps
 exec --no-startup-id nm-applet --indicator #wifi
