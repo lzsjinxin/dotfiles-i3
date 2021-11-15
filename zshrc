@@ -111,10 +111,12 @@ source $ZSH/oh-my-zsh.sh
 alias ls="exa --icons -a --group-directories-first"
 alias mph='mpv --ytdl-format=22 $1'
 alias mpl='mpv --ytdl-format=18 $1' 
-
+alias anime="~/ani-cli/./ani-cli"
+alias minecraft="echo einszweidreivier | sudo -S java -jar /run/media/lzsjinxin/d5b67ad0-31eb-4935-ae86-31b278e682d6/TLauncher-2.82/echo einszweidreivier | sudo -S java -jar /run/media/lzsjinxin/d5b67ad0-31eb-4935-ae86-31b278e682d6/TLauncher-2.82/TLauncher-2.82.jar"
+alias weather="curl wttr.in/casablanca"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-pfetch
+
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
